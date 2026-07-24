@@ -1,11 +1,88 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import LessonCard from "../components/LessonCard.astro";
+import "../styles/lesson.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const lessons = await getCollection(
+  "lessons",
+  ({ data }) => !data.draft,
+);
+
+const sortedLessons = lessons.sort((a, b) => {
+  const lessonA = a.data.lessonNumber ?? Number.MAX_SAFE_INTEGER;
+  const lessonB = b.data.lessonNumber ?? Number.MAX_SAFE_INTEGER;
+
+  return lessonA - lessonB;
+});
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <meta
+      name="description"
+      content="English lessons for chemical engineering students"
+    />
+
+    <title>Chemical Engineering English</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <a class="brand" href="/">
+          Chemical Engineering English
+        </a>
+
+        <nav aria-label="Main navigation">
+          <a href="/">Lessons</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="home-container">
+      <section aria-labelledby="lessons-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Course content</p>
+            <h2 id="lessons-title">All lessons</h2>
+          </div>
+
+          <p>
+            {sortedLessons.length}
+            {sortedLessons.length === 1 ? " lesson" : " lessons"}
+          </p>
+        </div>
+
+        {
+          sortedLessons.length > 0 ? (
+            <div class="lesson-grid">
+              {sortedLessons.map((lesson) => (
+                <LessonCard
+                  id={lesson.id}
+                  title={lesson.data.title}
+                  lessonNumber={lesson.data.lessonNumber}
+               />
+              ))}
+            </div>
+          ) : (
+            <p class="empty-state">
+              No lessons have been published yet.
+            </p>
+          )
+        }
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>English for Chemical Engineering</p>
+    </footer>
+  </body>
+</html>

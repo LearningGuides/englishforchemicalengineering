@@ -1,0 +1,62 @@
+---
+import "../styles/lesson.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  lessonNumber?: number;
+  difficulty?: string;
+}
+
+const {
+  title,
+  description = "Chemical Engineering English lesson",
+  lessonNumber,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <meta name="description" content={description} />
+
+    <title>{title} | Chemical Engineering English</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <a class="brand" href="/">
+          Chemical Engineering English
+        </a>
+
+        <nav aria-label="Main navigation">
+          <a href="/">Lessons</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lesson-container">
+      <article class="lesson-content">
+        <div class="markdown-content">
+          <slot />
+        </div>
+
+        <footer class="lesson-navigation">
+          <a href="/">← Back to all lessons</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>English for Chemical Engineering</p>
+    </footer>
+  </body>
+</html>

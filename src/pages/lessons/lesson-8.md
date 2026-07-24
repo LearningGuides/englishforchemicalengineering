@@ -137,7 +137,7 @@ This equation applies to both simple and complex chemical processes.
 
 # 🔄 Steady-State and Unsteady-State Processes
 
-![process](../assets/images/steadyunsteady.png)
+![process](../../assets/images/steadyunsteady.png)
 
 ## ⚙️ Steady-State Process
 

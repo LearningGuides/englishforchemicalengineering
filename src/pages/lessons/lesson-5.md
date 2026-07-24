@@ -64,7 +64,7 @@ Charts and graphs convert numerical information into visual representations, mak
 
 Different graph types are used depending on the type of data.
 
-![plots](../assets/images/plots.png)
+![plots](../../assets/images/plots.png)
 ---
 
 ## 📈 Line Graph

@@ -142,7 +142,7 @@ Typical verbs include:
 - Store
 - Discharge
 
-![Imagen](../assets/images/verbs1.png)
+![Imagen](../../assets/images/verbs1.png)
 
 
 

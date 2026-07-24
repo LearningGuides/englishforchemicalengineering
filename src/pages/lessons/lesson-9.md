@@ -84,7 +84,7 @@ Energy exists in many forms.
 
 Chemical engineers commonly work with the following types.
 
-![energy](../assets/images/typesofenergy.png)
+![energy](../../assets/images/typesofenergy.png)
 
 
 ## 🏔️ Potential Energy
@@ -166,7 +166,7 @@ Heat is commonly represented by the symbol:
 
 **Q**
 
-![heat transfer](../assets/images/heattransfer.png)
+![heat transfer](../../assets/images/heattransfer.png)
 
 Heat transfer occurs through three mechanisms.
 

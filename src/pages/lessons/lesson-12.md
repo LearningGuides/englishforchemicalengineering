@@ -42,7 +42,7 @@ Physical properties are measured in laboratories and reported in engineering dat
 
 A **physical property** is any characteristic of a material that can be measured without changing its chemical identity.
 
-![- Density- Viscosity- Melting point- Boiling point- Thermal conductivity- Specific heat capacity- Color- Electrical conductivity- Solubility](../assets/images/physicalproperties.png)
+![- Density- Viscosity- Melting point- Boiling point- Thermal conductivity- Specific heat capacity- Color- Electrical conductivity- Solubility](../../assets/images/physicalproperties.png)
 
 
 These properties help engineers compare materials and select the most suitable substance for a specific application.

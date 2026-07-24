@@ -42,7 +42,7 @@ Modern chemical engineering also includes renewable energy, biotechnology, nanot
 
 
 
-![Imagen](../assets/images/engineeringtypes.png)
+![Imagen](../../assets/images/engineeringtypes.png)
 
 Chemical engineering offers many career opportunities across different industries. Some of the most important fields include:
 

@@ -57,7 +57,7 @@ A **Process Flow Diagram (PFD)** is one of the first drawings created during the
 
 A PFD does **not** include every pipe, valve, or instrument. Instead, it focuses on the overall process and how materials move through the system.
 
-![PFD](../assets/images/pfd.png)
+![PFD](../../assets/images/pfd.png)
 
 ---
 
@@ -171,7 +171,7 @@ While a PFD focuses on the overall process, a P&ID shows exactly how the plant i
 
 P&IDs are among the most important engineering documents used during construction, operation, maintenance, and troubleshooting.
 
-![p&id](../assets/images/pid.png)
+![p&id](../../assets/images/pid.png)
 ---
 
 ## 🎯 Purpose of a P&ID

@@ -46,7 +46,7 @@ Unlike density or melting point, chemical properties can only be observed when a
 
 Examples include:
 
-![- Reactivity- Stability- Flammability- Corrosiveness- Oxidizing ability- Acidity- Basicity- Toxicity](../assets/images/chemicalproperties.png)
+![- Reactivity- Stability- Flammability- Corrosiveness- Oxidizing ability- Acidity- Basicity- Toxicity](../../assets/images/chemicalproperties.png)
 
 Chemical engineers evaluate these properties before selecting materials or designing processes.
 

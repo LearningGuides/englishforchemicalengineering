@@ -49,7 +49,7 @@ Process vocabulary describes how materials move and change during manufacturing.
 
 Common terms include:
 
-![Process, Operation, Production, Manufacturing, Reaction, Mixing,Separation, Distillation, Filtration, Drying ](../assets/images/process.png)
+![Process, Operation, Production, Manufacturing, Reaction, Mixing,Separation, Distillation, Filtration, Drying ](../../assets/images/process.png)
 
 Example:
 
@@ -64,7 +64,7 @@ Chemical plants contain many types of equipment.
 
 Examples include:
 
-![- Reactor- Pump- Compressor- Heat exchanger- Tank- Valve- Pipe- Furnace- Separator- Column](../assets/images/equipment.png)
+![- Reactor- Pump- Compressor- Heat exchanger- Tank- Valve- Pipe- Furnace- Separator- Column](../../assets/images/equipment.png)
 
 Example:
 
@@ -80,7 +80,7 @@ Examples include:
 
 
 
-![- Temperature- Pressure- Flow rate- Density- Concentration- Volume- Mass- Velocity- Viscosity- pH](../assets/images/measurement.png)
+![- Temperature- Pressure- Flow rate- Density- Concentration- Volume- Mass- Velocity- Viscosity- pH](../../assets/images/measurement.png)
 
 
 Example:
@@ -95,7 +95,7 @@ Safety is one of the highest priorities in chemical engineering.
 
 Important terms include:
 
-![- Hazard - Risk- Emergency- Protective equipment- Safety valve- Alarm- ire extinguisher- Toxic- Corrosive- Flammable](../assets/images/Safety.png)
+![- Hazard - Risk- Emergency- Protective equipment- Safety valve- Alarm- ire extinguisher- Toxic- Corrosive- Flammable](../../assets/images/Safety.png)
 
 Example:
 
@@ -110,7 +110,7 @@ Quality control ensures that products meet technical specifications.
 Common terms include:
 
 
-![- Inspection- Standard- Specification- Quality control- Quality ssurance- Defect- Sample- Accuracy- Precision- Calibration](../assets/images/Quality.png)
+![- Inspection- Standard- Specification- Quality control- Quality ssurance- Defect- Sample- Accuracy- Precision- Calibration](../../assets/images/Quality.png)
 
 
 

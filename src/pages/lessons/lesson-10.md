@@ -52,7 +52,7 @@ Each element has:
 
 Examples include:
 
-![elements](../assets/images/elements.png)
+![elements](../../assets/images/elements.png)
 
 Elements are the basic building blocks of all matter.
 
@@ -77,7 +77,7 @@ Unlike mixtures, compounds have consistent compositions and unique chemical prop
 
 Examples include:
 
-![compounds](../assets/images/compounds.png)
+![compounds](../../assets/images/compounds.png)
 
 Compounds can only be separated into their elements through chemical reactions.
 

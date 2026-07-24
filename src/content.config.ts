@@ -3,7 +3,7 @@ import { glob } from "astro/loaders";
 import {z} from "astro/zod";
 const lessons = defineCollection({
   loader: glob({
-    base: "./src/pages/lessons",
+    base: "./src/content/lessons",
     pattern: "**/*.{md,mdx}",
   }),
 

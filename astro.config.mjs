@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://LearningGuides.github.io',
   base: '/englishforchemicalengineering',
+  trailingSlash: "always",
 });

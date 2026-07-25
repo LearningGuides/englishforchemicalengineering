@@ -8,7 +8,7 @@ interface Props {
 const { id, title } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const lessonUrl = `${base}/1lessons/${id}/`;
+const lessonUrl = `${base}/lessons/${id}/`;
 ---
 
 <article class="lesson-card">

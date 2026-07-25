@@ -5,17 +5,17 @@ interface Props {
   lessonNumber?: number;
 }
 
-const {
-  id,
-  title,
-  lessonNumber,
-} = Astro.props;
+const { id, title, lessonNumber } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const lessonUrl = `${base}lessons/${id}/`;
 ---
 
 <article class="lesson-card">
   <h2>
-    <a href={`${import.meta.env.BASE_URL}lessons/${id}`}>
+    <a href={lessonUrl}>
       {title}
     </a>
   </h2>
-</article>
+
+  </article>

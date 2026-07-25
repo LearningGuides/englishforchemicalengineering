@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection, render } from "astro:content";
-import LessonLayout from "../layouts/LessonLayout.astro";
+import LessonLayout from "../../layouts/LessonLayout.astro";
 
 export async function getStaticPaths() {
   const lessons = await getCollection(

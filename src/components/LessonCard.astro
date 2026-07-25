@@ -5,9 +5,9 @@ interface Props {
   lessonNumber?: number;
 }
 
-const { id, title, lessonNumber } = Astro.props;
+const { id, title } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const lessonUrl = `${base}/lessons/${id}/`;
 ---
 

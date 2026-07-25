@@ -13,6 +13,8 @@ const {
   description = "Chemical Engineering English lesson",
   lessonNumber,
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <!doctype html>
@@ -33,12 +35,12 @@ const {
   <body>
     <header class="site-header">
       <div class="header-content">
-        <a class="brand" href="/">
+        <a class="brand" href=`${base}/`>
           Chemical Engineering English
         </a>
 
         <nav aria-label="Main navigation">
-          <a href="/">Lessons</a>
+          <a href=`${base}/`>Lessons</a>
         </nav>
       </div>
     </header>
@@ -50,7 +52,7 @@ const {
         </div>
 
         <footer class="lesson-navigation">
-          <a href="/">← Back to all lessons</a>
+          <a href=`${base}/`>← Back to all lessons</a>
         </footer>
       </article>
     </main>

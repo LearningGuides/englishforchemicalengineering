@@ -33,8 +33,6 @@ Modern chemical engineering also includes renewable energy, biotechnology, nanot
 
 💡 **Inferred explanation:** Chemical engineering combines science with engineering design to solve real industrial problems.
 
-![Descripción de la imagen](https://imgs.search.brave.com/VxLPYx__pVy6AXBOC1_N9Y0uFncBlrw9tBslMksfmgg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jaGVt/aWNhbC1lbmdpbmVl/cmluZy1iYWxsb29u/LXdvcmRzLWxpdC11/cC15ZWxsb3ctbGln/aHRpbmctNTM4MzI0/NDEuanBn)
-
 ---
 
 

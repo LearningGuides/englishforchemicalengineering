@@ -1,5 +1,6 @@
 ---
 import "../styles/lesson.css";
+import TextToSpeech from "../components/TextToSpeech.astro";
 
 interface Props {
   title: string;
@@ -60,5 +61,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <footer class="site-footer">
       <p>English for Chemical Engineering</p>
     </footer>
+        <TextToSpeech />
+
   </body>
 </html>

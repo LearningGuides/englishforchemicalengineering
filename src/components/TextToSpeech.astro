@@ -1,0 +1,234 @@
+<div id="speech-menu" class="speech-menu" hidden>
+  <button id="speech-play" type="button">
+    🔊 Play
+  </button>
+
+  <button class="speech-speed active" type="button" data-speed="1">
+    1×
+  </button>
+
+  <button class="speech-speed" type="button" data-speed="0.5">
+    0.5×
+  </button>
+
+  <button class="speech-speed" type="button" data-speed="0.25">
+    0.25×
+  </button>
+
+  <button id="speech-close" type="button" aria-label="Close">
+    ✕
+  </button>
+</div>
+
+<script>
+  const menu = document.querySelector<HTMLElement>("#speech-menu");
+  const playButton =
+    document.querySelector<HTMLButtonElement>("#speech-play");
+  const closeButton =
+    document.querySelector<HTMLButtonElement>("#speech-close");
+  const speedButtons =
+    document.querySelectorAll<HTMLButtonElement>(".speech-speed");
+
+  let selectedText = "";
+  let speechRate = 1;
+
+  function closeMenu() {
+    selectedText = "";
+
+    if (menu) {
+      menu.hidden = true;
+    }
+
+    window.speechSynthesis.cancel();
+  }
+
+  function showMenu(range: Range) {
+    if (!menu) return;
+
+    const selectionRect = range.getBoundingClientRect();
+
+    menu.hidden = false;
+
+    const menuRect = menu.getBoundingClientRect();
+
+    let left =
+      selectionRect.left +
+      window.scrollX +
+      selectionRect.width / 2 -
+      menuRect.width / 2;
+
+    let top = selectionRect.bottom + window.scrollY + 10;
+
+    const margin = 12;
+    const maximumLeft =
+      window.scrollX +
+      window.innerWidth -
+      menuRect.width -
+      margin;
+
+    left = Math.max(window.scrollX + margin, left);
+    left = Math.min(maximumLeft, left);
+
+    if (
+      selectionRect.bottom + menuRect.height + 20 >
+      window.innerHeight
+    ) {
+      top =
+        selectionRect.top +
+        window.scrollY -
+        menuRect.height -
+        10;
+    }
+
+    menu.style.left = `${left}px`;
+    menu.style.top = `${top}px`;
+  }
+
+  function handleSelection() {
+    const selection = window.getSelection();
+
+    if (
+      !selection ||
+      selection.isCollapsed ||
+      selection.rangeCount === 0
+    ) {
+      return;
+    }
+
+    const text = selection
+      .toString()
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (!text) return;
+
+    const selectedNode = selection.anchorNode;
+
+    const selectedElement =
+      selectedNode instanceof Element
+        ? selectedNode
+        : selectedNode?.parentElement;
+
+    // Only works inside elements marked as an article.
+    if (!selectedElement?.closest("[data-english-article]")) {
+      return;
+    }
+
+    // Prevent activation inside input fields.
+    if (
+      selectedElement.closest(
+        "input, textarea, [contenteditable='true']"
+      )
+    ) {
+      return;
+    }
+
+    selectedText = text.slice(0, 1000);
+
+    showMenu(selection.getRangeAt(0));
+  }
+
+  function playAudio() {
+    if (!selectedText) return;
+
+    if (!("speechSynthesis" in window)) {
+      alert("Your browser does not support speech playback.");
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const utterance =
+      new SpeechSynthesisUtterance(selectedText);
+
+    utterance.lang = "en-US";
+    utterance.rate = speechRate;
+    utterance.pitch = 1;
+
+    const voices = window.speechSynthesis.getVoices();
+
+    const englishVoice =
+      voices.find((voice) => voice.lang === "en-US") ??
+      voices.find((voice) => voice.lang.startsWith("en"));
+
+    if (englishVoice) {
+      utterance.voice = englishVoice;
+    }
+
+    window.speechSynthesis.speak(utterance);
+  }
+
+  speedButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      speechRate = Number(button.dataset.speed);
+
+      speedButtons.forEach((speedButton) => {
+        speedButton.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      if (selectedText) {
+        playAudio();
+      }
+    });
+  });
+
+  document.addEventListener("mouseup", () => {
+    window.setTimeout(handleSelection, 10);
+  });
+
+  document.addEventListener("touchend", () => {
+    window.setTimeout(handleSelection, 100);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("scroll", closeMenu, {
+    passive: true,
+  });
+
+  playButton?.addEventListener("click", playAudio);
+  closeButton?.addEventListener("click", closeMenu);
+</script>
+
+<style>
+  .speech-menu {
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 25%);
+  }
+
+  .speech-menu[hidden] {
+    display: none;
+  }
+
+  .speech-menu button {
+    padding: 7px 10px;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+    background: #1f2937;
+    border: 0;
+    border-radius: 7px;
+  }
+
+  .speech-menu button:hover {
+    background: #374151;
+  }
+
+  .speech-menu .speech-speed.active {
+    background: #2563eb;
+  }
+</style>

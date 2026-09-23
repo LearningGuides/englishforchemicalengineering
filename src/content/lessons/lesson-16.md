@@ -314,75 +314,8 @@ Each piece of equipment uses one or more modes of heat transfer.
 
 ---
 
-# 🏭 Industrial Applications
 
-Heat transfer is essential in many industries.
 
-### 🛢️ Petroleum Refining
-
-- Crude oil heating
-- Distillation
-- Heat recovery
-
----
-
-### 💊 Pharmaceutical Manufacturing
-
-- Sterilization
-- Temperature-controlled reactors
-- Drying operations
-
----
-
-### 🍎 Food Processing
-
-- Pasteurization
-- Cooking
-- Refrigeration
-
----
-
-### ♻️ Environmental Engineering
-
-- Wastewater treatment
-- Sludge drying
-- Energy recovery systems
-
-Efficient heat transfer improves product quality, reduces energy consumption, and supports sustainable manufacturing.
-
----
-
-# 📄 Heat Transfer Information in Engineering Documents
-
-Heat transfer data appear in:
-
-- 📘 Equipment manuals
-- 📋 Heat exchanger specifications
-- 📊 Process Flow Diagrams (PFDs)
-- 📈 Energy balance reports
-- ⚙️ Operating procedures
-- 🔧 Maintenance manuals
-
-Engineers use these documents to analyze system performance and optimize energy use.
-
----
-
-# 🌍 Importance of Heat Transfer
-
-Understanding heat transfer helps engineers to:
-
-- Design heating and cooling systems.
-- Improve energy efficiency.
-- Reduce operating costs.
-- Protect equipment from overheating.
-- Control reaction temperatures.
-- Improve product quality.
-- Increase process safety.
-- Support sustainable industrial operations.
-
-Heat transfer is one of the foundations of chemical engineering design and operation.
-
----
 
 # 📖 Key Vocabulary
 

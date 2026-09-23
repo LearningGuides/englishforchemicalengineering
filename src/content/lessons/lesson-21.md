@@ -301,55 +301,6 @@ A higher percent yield generally indicates a more efficient process.
 
 ---
 
-# 🏭 Industrial Applications of Stoichiometry
-
-Chemical engineers use stoichiometry in many operations.
-
-Examples include:
-
-- Reactor design
-- Raw material calculations
-- Product yield estimation
-- Waste reduction
-- Environmental compliance
-- Process optimization
-
-Stoichiometric calculations are performed before building or operating industrial processes.
-
----
-
-# 📄 Reaction Information in Engineering Documents
-
-Information about chemical reactions appears in:
-
-- 📘 Process Flow Diagrams (PFDs)
-- 🔧 Piping and Instrumentation Diagrams (P&IDs)
-- 📋 Laboratory reports
-- 📊 Material balance calculations
-- ⚙️ Reactor specifications
-- 📈 Operating procedures
-
-Engineers use these documents to verify reaction conditions, reactant quantities, and product specifications.
-
----
-
-# 🌍 Importance of Chemical Reactions
-
-Understanding chemical reactions helps engineers to:
-
-- Design efficient reactors.
-- Predict product formation.
-- Calculate material requirements.
-- Improve reaction yields.
-- Reduce waste.
-- Increase plant safety.
-- Optimize industrial production.
-- Improve product quality.
-
-Chemical reactions are the foundation of every chemical manufacturing process.
-
----
-
 # 📖 Key Vocabulary
 
 | Term | Definition |
